@@ -1,9 +1,9 @@
 from numpy import ndarray
 from sklearn.cluster import KMeans
 
-from data.enums.Algorithm_Over_Clustering import Algorithm_Over_Clustering
-from data.results.OverClusteringResult import OverClusteringResult
-from overclustering.GlobalKMeansPp import GlobalKmeansPp
+from code.data.enums.Algorithm_Over_Clustering import Algorithm_Over_Clustering
+from code.data.results.OverClusteringResult import OverClusteringResult
+from code.overclustering.GlobalKMeansPp import GlobalKmeansPp
 
 
 def over_clustering(

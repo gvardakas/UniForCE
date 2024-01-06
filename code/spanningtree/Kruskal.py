@@ -8,10 +8,10 @@ from numpy import ndarray
 from scipy.sparse import lil_matrix
 from sklearn.metrics import euclidean_distances
 
-from data.enums.Distribution import Distribution
-from data.enums.Statistical_Test import Statistical_Test
-from data.options.SpanningTreeOptions import SpanningTreeOptions
-from data.results.MinimumSpanningTreeResult import MinimumSpanningTreeResult
+from code.data.enums.Distribution import Distribution
+from code.data.enums.Statistical_Test import Statistical_Test
+from code.data.options.SpanningTreeOptions import SpanningTreeOptions
+from code.data.results.MinimumSpanningTreeResult import MinimumSpanningTreeResult
 
 
 class Kruskal:

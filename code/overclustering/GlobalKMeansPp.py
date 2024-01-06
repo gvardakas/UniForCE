@@ -7,7 +7,7 @@ import numpy as np
 from numpy import ndarray
 from sklearn.cluster import KMeans
 
-from data.results.OverClusteringResult import OverClusteringResult
+from code.data.results.OverClusteringResult import OverClusteringResult
 
 
 @dataclass

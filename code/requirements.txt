@@ -10,3 +10,5 @@ seglearn~=1.2.5
 opencv-python~=4.9.0.80
 imageio~=2.33.1
 rawpy~=0.19.0
+jupyter~=1.0.0
+scikit-image~=0.22.0
