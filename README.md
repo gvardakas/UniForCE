@@ -11,10 +11,12 @@
   year={2023}
 }
 
-@article{vardakas2022global,
-  title={Global $k$-means$++$: an effective relaxation of the global $k$-means clustering algorithm},
+@article{vardakas2024global,
+  title={Global k-means++: an effective relaxation of the global k-means clustering algorithm},
   author={Vardakas, Georgios and Likas, Aristidis},
-  journal={arXiv preprint arXiv:2211.12271},
-  year={2022}
+  journal={Applied Intelligence},
+  pages={1--13},
+  year={2024},
+  publisher={Springer}
 }
 ```
