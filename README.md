@@ -4,11 +4,13 @@
 # References
 ```
 
-@article{vardakas2023uniforce,
-  title={UniForCE: The Unimodality Forest Method for Clustering and Estimation of the Number of Clusters},
+@article{vardakas2025uniforce,
+  title={Uniforce: The unimodality forest method for clustering and estimation of the number of clusters},
   author={Vardakas, Georgios and Kalogeratos, Argyris and Likas, Aristidis},
-  journal={arXiv preprint arXiv:2312.11323},
-  year={2023}
+  journal={Pattern Recognition},
+  pages={112357},
+  year={2025},
+  publisher={Elsevier}
 }
 
 @article{vardakas2024global,
