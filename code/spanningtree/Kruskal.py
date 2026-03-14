@@ -163,7 +163,7 @@ class Kruskal:
                 samples_sub_cluster_j: ndarray = np.where(self.__sub_predictions == j)[0]
                 # samples_indexes: ndarray = np.concatenate((samples_sub_cluster_i, samples_sub_cluster_j))
                 # X, y = data[samples_indexes], sub_predictions[samples_indexes]
-                self._sorting_sub_clusters_by_sample_size(
+                final_i, final_j = self._sorting_sub_clusters_by_sample_size(
                     samples_sub_cluster_i,
                     samples_sub_cluster_j,
                     i,
@@ -175,9 +175,12 @@ class Kruskal:
                     options.alpha
                 )
 
-                self.__adjacency_matrix[j, i] = self.__adjacency_matrix[i, j]
-                if self.__adjacency_matrix[i, j] > 0:
-                    self.__union_find.union(i, j)
+                self.__adjacency_matrix[final_j, final_i] = self.__adjacency_matrix[final_i, final_j]
+                if self.__adjacency_matrix[final_i, final_j] > 0:
+                    self.__union_find.union(final_i, final_j)
+                #self.__adjacency_matrix[j, i] = self.__adjacency_matrix[i, j]
+                #if self.__adjacency_matrix[i, j] > 0:
+                #    self.__union_find.union(i, j)
 
             # Early termination
             if self._reached_target_number_of_clusters(options.specific_number_of_clusters):
@@ -193,7 +196,7 @@ class Kruskal:
             majority_n_tests: int, distribution: Distribution,
             statistical_method: Statistical_Test,
             alpha: float
-    ) -> None:
+    ) -> tuple[int, int]: 
         n_i = samples_sub_cluster_i.shape[0]
         n_j = samples_sub_cluster_j.shape[0]
         if n_j < n_i:
@@ -213,6 +216,7 @@ class Kruskal:
             samples_indexes = np.concatenate((samples_sub_cluster_i, samples_sub_cluster_j[sub_indexes]))
             x, _ = data[samples_indexes], self.__sub_predictions[samples_indexes]
             self._distribution_calculation(distribution, x, i, j, alpha, statistical_method)
+        return i, j 
 
     def _in_same_tree(
             self,
